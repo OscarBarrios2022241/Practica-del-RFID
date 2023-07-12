@@ -1,3 +1,6 @@
+//Oscar Jose Barrios Cotom - 2022241
+
+
 #include <SPI.h>			// incluye libreria bus SPI
 #include <MFRC522.h>			// incluye libreria especifica para MFRC522
 #include <Servo.h>//Librerias
@@ -62,7 +65,7 @@ void loop() {
           if(comparaUID(LecturaUID, Usuario1)){//llama a funcion comparaUID con Usuario1
             lcd.clear();
             Serial.println("Bienvenido Usuario 1");	// si retorna verdadero muestra texto bienvenida
-            servo.write(90);
+            servo.write(90);//Se mueve a 90 grados si cumple el if
             delay(20);
             lcd.print("Hola Usuario1");
             digitalWrite(buzzer, HIGH);
